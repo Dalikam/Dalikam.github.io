@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<header class="relative bg-gray-800 text-white text-center py-32">
+    <div class="absolute inset-0 bg-cover bg-center opacity-50"></div>
+    <div class="relative z-10">
+        <h1 class="text-4xl font-bold">Chess Openings</h1>
+        <p class="text-lg mt-4">Discover and learn the most popular chess openings!</p>
+    </div>
+</header>
+
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+</head>
+
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    {% for opening in site.posts %}
+    <div class="bg-white shadow-lg rounded-lg p-6 hover:bg-gray-100">
+        <h3 class="text-xl font-semibold">{{ opening.title }}</h3>
+        <p class="mt-2">{{ opening.excerpt }}</p>
+        <a href="{{ opening.url }}" class="text-blue-500 mt-4 inline-block">Read More</a>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+</html>

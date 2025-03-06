@@ -1,0 +1,6 @@
+title: Otwarcia szachowe
+baseurl: ""
+url: ""
+markdown: kramdown
+plugins:
+  - jekyll-feed
