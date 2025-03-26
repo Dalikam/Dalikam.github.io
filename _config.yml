@@ -2,8 +2,13 @@ title: Otwarcia szachowe
 baseurl: ""
 url: ""
 markdown: kramdown
+sass:
+    style: compressed  
 plugins:
   - jekyll-feed
   
   assets:
   enable: true
+
+  
+
