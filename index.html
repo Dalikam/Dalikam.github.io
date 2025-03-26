@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+<body class="bg-gray-100 text-gray-200">
+
+    <div class="container mx-auto p-8">
+
+        <h1 class="text-4xl text-sky-500">Witaj na mojej stronie!</h1>
+        <p class="text-red-500">To jest tekst w kolorze czerwonym.</p>
+        <p class="text-green-500">A to jest tekst w kolorze zielonym.</p>
+
+        <div class="mt-4">
+            <a href="#" class="text-blue-500 hover:text-blue-700">Kliknij tutaj, aby dowiedzieć się więcej</a>
+        </div>
+
+        <div class="mt-4">
+            <a href="#" class="text-purple-500 hover:text-purple-700">Kolejny link w kolorze fioletowym</a>
+        </div>
+
+    </div>
+
+    <header class="relative bg-gray-800 text-white text-center py-32 bg-cover bg-center"
+        style="background-image: url('/assets/images/chess-bg.jpg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10">
+            <h1 class="text-4xl font-bold">Chess Openings</h1>
+            <p class="text-lg mt-4">Discover and learn the most popular chess openingsooo!</p>
+        </div>
+    </header>
+
+
+    <head>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <meta charset="UTF-8">
+        <title>{{ page.title }}</title>
+
+        <style>
+            body {
+                background-color: #80f0f0;
+            }
+        </style>
+    </head>
+
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {% for opening in site.posts %}
+        <div class="bg-white shadow-lg rounded-lg p-6 hover:bg-gray-100">
+            <h3 class="text-xl font-semibold">{{ opening.title }}</h3>
+            <p class="mt-2">{{ opening.excerpt }}</p>
+            <a href="{{ opening.url }}" class="text-blue-500 mt-4 inline-block">Read More</a>
+        </div>
+        {% endfor %}
+    </div>
+
+    <main class="container mx-auto px-6 py-12 hidden md:block">
+        <article class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4">Starting position statistics according to chess.com database</h2>
+
+            <table class="w-full border-collapse border border-gray-700 text-gray-200 bg-gray-900">
+                <thead class="bg-gray-800">
+                    <tr>
+                        <th class="p-3 border border-gray-700 text-left">Move</th>
+                        <th class="p-3 border border-gray-700">Games</th>
+                        <th class="p-3 border border-gray-700">Win %</th>
+                        <th class="p-3 border border-gray-700">Draw %</th>
+                        <th class="p-3 border border-gray-700">Loss %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="hover:bg-gray-700">
+                        <td class="p-3 border border-gray-700">1. Nf3</td>
+                        <td class="p-3 border border-gray-700">405,527</td>
+                        <td class="p-3 border border-gray-700">46%</td>
+                        <td class="p-3 border border-gray-700">11%</td>
+                        <td class="p-3 border border-gray-700">43%</td>
+                    </tr>
+                    <tr class="hover:bg-gray-700">
+                        <td class="p-3 border border-gray-700">1. g4</td>
+                        <td class="p-3 border border-gray-700">1,624</td>
+                        <td class="p-3 border border-gray-700">39%</td>
+                        <td class="p-3 border border-gray-700">33%</td>
+                        <td class="p-3 border border-gray-700">27%</td>
+                    </tr>
+                    <tr class="hover:bg-gray-700">
+                        <td class="p-3 border border-gray-700">1. f4</td>
+                        <td class="p-3 border border-gray-700">14,395</td>
+                        <td class="p-3 border border-gray-700">36%</td>
+                        <td class="p-3 border border-gray-700">23%</td>
+                        <td class="p-3 border border-gray-700">41%</td>
+                    </tr>
+                    <tr class="hover:bg-gray-700">
+                        <td class="p-3 border border-gray-700">1. e4</td>
+                        <td class="p-3 border border-gray-700">1,866,828</td>
+                        <td class="p-3 border border-gray-700">38%</td>
+                        <td class="p-3 border border-gray-700">29%</td>
+                        <td class="p-3 border border-gray-700">32%</td>
+                    </tr>
+                    <tr class="hover:bg-gray-700">
+                        <td class="p-3 border border-gray-700">1. d4</td>
+                        <td class="p-3 border border-gray-700">1,402,689</td>
+                        <td class="p-3 border border-gray-700">39%</td>
+                        <td class="p-3 border border-gray-700">32%</td>
+                        <td class="p-3 border border-gray-700">30%</td>
+                    </tr>
+                    <tr class="hover:bg-gray-700">
+                        <td class="p-3 border border-gray-700">1. d3</td>
+                        <td class="p-3 border border-gray-700">2,341</td>
+                        <td class="p-3 border border-gray-700">39%</td>
+                        <td class="p-3 border border-gray-700">19%</td>
+                        <td class="p-3 border border-gray-700">42%</td>
+                    </tr>
+                    </tr>
+                    <tr class="hover:bg-gray-700">
+                        <td class="p-3 border border-gray-700">1. c4</td>
+                        <td class="p-3 border border-gray-700">275,594</td>
+                        <td class="p-3 border border-gray-700">39%</td>
+                        <td class="p-3 border border-gray-700">32%</td>
+                        <td class="p-3 border border-gray-700">28%</td>
+                    </tr>
+                    </tr>
+                    <tr class="hover:bg-gray-700">
+                        <td class="p-3 border border-gray-700">1. b3</td>
+                        <td class="p-3 border border-gray-700">24,587</td>
+                        <td class="p-3 border border-gray-700">44%</td>
+                        <td class="p-3 border border-gray-700">22%</td>
+                        <td class="p-3 border border-gray-700">35%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-6">
+        <p>© 2025 Chess Openings. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
