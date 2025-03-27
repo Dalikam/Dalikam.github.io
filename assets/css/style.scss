@@ -1,15 +1,18 @@
-@import "colors";
-@import "tailwindcss";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
+/* Styl dla całego body */
 body {
-    background-color: $background-color;
-    color: $text-color;
+    @apply bg-white text-gray-900;
 }
 
+/* Styl dla linków */
 a {
-    color: $link-color;
+    @apply text-blue-500 hover:text-blue-700;
+}
 
-    &:hover {
-        color: $link-hover-color;
-    }
+/* Jeśli chcesz inne kolory dla linków w nawigacji */
+.nav a {
+    @apply text-sky-500 hover:text-sky-700;
 }
