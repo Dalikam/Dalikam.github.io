@@ -31,29 +31,13 @@
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         {% for opening in site.posts %}
-        <div class="glass-card">
+        <div class="bg-white shadow-lg rounded-lg p-6 hover:bg-gray-100">
             <h3 class="text-xl font-semibold text-gray-600">{{ opening.title }}</h3>
             <p class="mt-2 text-gray-200">{{ opening.excerpt }}</p>
             <a href="{{ opening.url }}" class="text-blue-500 mt-4 inline-block">Read More</a>
         </div>
         {% endfor %}
     </div>
-
-    <style>
-        .glass-card {
-            background: rgba(255, 255, 255, 0.1);
-            /* Przezroczyste tło */
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
-            /* Efekt szkła */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 20px;
-            width: 300px;
-            text-align: center;
-            color: white;
-        }
-    </style>
 
     <footer class="bg-gray-800 text-white text-center py-6">
         <p>© 2025 Chess Openings. All rights reserved.</p>
