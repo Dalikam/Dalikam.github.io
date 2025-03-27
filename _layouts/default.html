@@ -33,7 +33,7 @@
         {% for opening in site.posts %}
         <div class="bg-white shadow-lg rounded-lg p-6 hover:bg-gray-100">
             <h3 class="text-xl font-semibold text-gray-600">{{ opening.title }}</h3>
-            <p class="mt-2">{{ opening.excerpt }}</p>
+            <p class="mt-2 text-gray-200">{{ opening.excerpt }}</p>
             <a href="{{ opening.url }}" class="text-blue-500 mt-4 inline-block">Read More</a>
         </div>
         {% endfor %}
