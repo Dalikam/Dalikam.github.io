@@ -36,7 +36,10 @@
         <div class="bg-white shadow-lg rounded-lg p-6 hover:bg-gray-100">
             <h3 class="text-xl font-semibold text-gray-600">Content about openings</h3>
             <p class="mt-2"></p>
-            <a href="content" class=" animate-ping text-blue-500 mt-4 inline-block">Read More</a>
+            <a href="content" class="animate-ping text-blue-500 mt-4 inline-block relative">
+                Read More
+                <span class="absolute inset-0.5 bg-blue-500 rounded-full opacity-50 animate-ping"></span>
+            </a>
         </div>
         {% endfor %}
     </div>
