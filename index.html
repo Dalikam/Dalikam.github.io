@@ -123,6 +123,42 @@
 
     </main>
 
+    <main class="container mx-auto px-6 py-12 hidden md:block">
+        <article class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">Starting position statistics according to chess.com
+                database</h2>
+
+            <div class="flex flex-col gap-6">
+                <div class="flex flex-col bg-gray-800 p-4 text-white">Move</div>
+                <div class="flex flex-col bg-gray-800 p-4 text-white">Games</div>
+                <div class="flex flex-col bg-gray-800 p-4 text-white">Win %</div>
+                <div class="flex flex-col bg-gray-800 p-4 text-white">Draw %</div>
+                <div class="flex flex-col bg-gray-800 p-4 text-white">Loss %</div>
+            </div>
+
+            <div class="flex flex-col gap-4 mt-4">
+                <div class="flex flex-col hover:bg-gray-700 p-4">
+                    <div class="flex-none p-3">1. Nf3</div>
+                    <div class="flex-none p-3">405,527</div>
+                    <div class="flex-none p-3">46%</div>
+                    <div class="flex-none p-3">11%</div>
+                    <div class="flex-none p-3">43%</div>
+                </div>
+
+                <div class="flex flex-col hover:bg-gray-700 p-4">
+                    <div class="flex-none p-3">1. g4</div>
+                    <div class="flex-none p-3">1,624</div>
+                    <div class="flex-none p-3">39%</div>
+                    <div class="flex-none p-3">33%</div>
+                    <div class="flex-none p-3">27%</div>
+                </div>
+
+                <!-- Dodaj kolejne wiersze w podobny sposób -->
+            </div>
+        </article>
+    </main>
+
+
     <footer class="bg-gray-800 text-white text-center py-6">
         <p>© 2025 Chess Openings. All rights reserved.</p>
     </footer>
