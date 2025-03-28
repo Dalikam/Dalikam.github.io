@@ -31,13 +31,31 @@
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         {% for opening in site.posts %}
-        <div class="bg-white shadow-lg rounded-lg p-6 hover:bg-gray-100">
+        <div class="card">
             <h3 class="text-xl font-semibold text-gray-600">{{ opening.title }}</h3>
             <p class="mt-2 text-gray-200">{{ opening.excerpt }}</p>
             <a href="{{ opening.url }}" class="text-blue-500 mt-4 inline-block">Read More</a>
         </div>
         {% endfor %}
     </div>
+
+    <style>
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: rotateY(10deg) rotateX(5deg);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 
     <footer class="bg-gray-800 text-white text-center py-6">
         <p>© 2025 Chess Openings. All rights reserved.</p>
