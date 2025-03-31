@@ -21,7 +21,7 @@
     <head>
         <script src="https://cdn.tailwindcss.com"></script>
         <meta charset="UTF-8">
-        <title>{{ page.title }}</title>
+        <title>Chess openings</title>
 
         <style>
             body {
@@ -32,7 +32,6 @@
 
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {% for opening in site.posts %}
         <div class="bg-white shadow-lg rounded-lg p-6 hover:bg-gray-100">
             <h3 class="text-xl font-semibold text-gray-600">Content about openings</h3>
             <p class="mt-2"></p>
@@ -40,7 +39,6 @@
                 Read More
             </a>
         </div>
-        {% endfor %}
     </div>
 
     <main class="container mx-auto px-6 py-12 hidden md:block">
